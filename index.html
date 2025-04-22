@@ -3,38 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roman Avelar | Portfolio</title>
+  <title>Roman Avelar | Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #eaeaea;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #111;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #00bcd4;
+    }
+    nav {
+      background-color: #222;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #eaeaea;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+    }
+    .project {
+      border-left: 4px solid #00bcd4;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+    footer p {
+      color: #888;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Hi, I'm Roman Avelar</h1>
-    <p>Welcome to my professional portfolio</p>
+    <h1>Roman Avelar</h1>
+    <p>Mechanical Engineer | Innovator | Builder</p>
   </header>
 
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <main>
-    <section>
+    <section id="about">
       <h2>About Me</h2>
-      <p>I’m a mechanical engineer with a passion for aerospace and hands-on projects.</p>
+      <p>I am a Mechanical Engineering student at Cal Poly Pomona with a strong interest in aerospace, machine design, and hands-on project development. I love creating high-impact mechanical systems and pushing technical limits with innovative engineering.</p>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>Rocket-Powered Lander – Designed thrust-vectoring system</li>
-        <li>Electric Vehicle Retrofit – Converted gas car to electric</li>
-        <li>Custom Tesla Coil – Built from scratch</li>
-      </ul>
+    <section id="projects">
+      <h2>Featured Projects</h2>
+
+      <div class="project">
+        <h3>Rocket Powered Lander (Project Phoenix)</h3>
+        <ul>
+          <li>Mechanisms Lead Engineer on Cal Poly Pomona's first successful throttleable rocket engine.</li>
+          <li>Designed a thrust-vectoring system and throttle actuation for nitromethane fuel control.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Electric Vehicles</h3>
+        <ul>
+          <li><strong>Go Kart:</strong> Built custom powertrain and chassis. Achieved 60mph performance with optimized geometry.</li>
+          <li><strong>Motorcycle:</strong> Dual-motor electric retrofit with custom battery mount and electronic throttle system.</li>
+          <li><strong>Drift Trike:</strong> Custom steel frame, solid rear axle, drift-capable using PVC rear tires.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Custom 3D Printer</h3>
+        <ul>
+          <li>Fully self-designed printer using Fusion 360 and fabricated using industry-quality techniques.</li>
+          <li>Integrated motors, sensors, and control systems for reliable thermoplastic extrusion.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Tesla Coil</h3>
+        <ul>
+          <li>Built a 5-foot tall Tesla Coil outputting over 500,000V and producing arcs over 6 feet in length.</li>
+          <li>Explored advanced principles of electromagnetism and high-voltage safety.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Roman Milling & Engraving</h3>
+        <ul>
+          <li>Founded a CNC business fulfilling over 60 orders for a $35M agricultural company.</li>
+          <li>Designed and produced proprietary components essential for production of 8M+ units.</li>
+        </ul>
+      </div>
     </section>
 
-    <section>
+    <section id="resume">
+      <h2>Resume</h2>
+      <p><a href="Resume-03-05-2025.pdf" target="_blank">Download Resume (PDF)</a></p>
+      <p><a href="https://www.linkedin.com/in/roman-avelar" target="_blank">View LinkedIn Profile</a></p>
+    </section>
+
+    <section id="contact">
       <h2>Contact</h2>
-      <p>Email: roman@example.com</p>
+      <p>Email: <a href="mailto:ravelar@cpp.edu">ravelar@cpp.edu</a></p>
+      <p>Location: Pomona, CA</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Roman Avelar</p>
+    <p>&copy; 2025 Roman Avelar. All rights reserved.</p>
   </footer>
 </body>
 </html>
