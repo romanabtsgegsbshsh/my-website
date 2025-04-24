@@ -1,167 +1,186 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom, #0a0f2c, #1c1e2f);
-    color: #e0e0e0;
-  }
-  
-  header {
-    text-align: center;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .portrait {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-  
-  .nav-buttons {
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-  }
-  
-  .nav-btn {
-    background-color: #1f2a44;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    margin-left: 0.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 1px solid #3c5c88;
-    transition: background-color 0.3s ease;
-  }
-  
-  .nav-btn:hover {
-    background-color: #3c5c88;
-  }
-  
-  main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .projects h2,
-  .experience h2,
-  .skills h2,
-  .memberships h2 {
-    margin-top: 2rem;
-    border-bottom: 1px solid #555;
-    padding-bottom: 0.5rem;
-    font-size: 1.5rem;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .project {
-    background-color: #1c1e2f;
-    border: 1px solid #333;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .project:hover {
-    transform: scale(1.03);
-  }
-  
-  .project img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  .expand-text {
-    margin-top: 0.5rem;
-    color: #aaa;
-    font-size: 0.9rem;
-  }
-  
-  .info-box {
-    display: none;
-    background-color: rgba(20, 20, 30, 0.95);
-    padding: 1rem;
-    border: 1px solid #444;
-    border-radius: 8px;
-    margin-top: 1rem;
-    position: relative;
-    z-index: 10;
-  }
-  
-  .info-images {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .info-images img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-  }
-  
-  .info-images img:hover {
-    transform: scale(1.75);
-    z-index: 5;
-  }
-  
-  .exp-box {
-    background-color: #23263a;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-    transition: transform 0.2s ease;
-  }
-  
-  .exp-box:hover {
-    transform: scale(1.01) rotate(-0.5deg);
-  }
-  
-  .exp-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  
-  .exp-bullet {
-    margin-top: 0.5rem;
-    line-height: 1.4;
-    max-width: 60%;
-    word-wrap: break-word;
-  }
-  
-  .skill-boxes {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-  
-  .skill-box {
-    flex: 1;
-    background-color: #1c1e2f;
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid #333;
-  }
-  
-  .memberships ul {
-    margin-top: 1rem;
-    padding-left: 1.5rem;
-    list-style-type: disc;
-  }
-  
+  background: linear-gradient(to bottom right, navy, #0077b6);
+  padding-top: 70px;
+}
+
+.top-banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.top-banner button {
+  background-color: #00b4d8;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.portrait {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.subheading, .contact {
+  margin-top: 0.5rem;
+  color: #cce3f5;
+}
+
+.projects, .experience, .skills, .memberships {
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.projects h2, .experience h2, .skills h2, .memberships h2 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  border-bottom: 2px solid #48cae4;
+  padding-bottom: 0.5rem;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: #ade8f4;
+  margin-left: 0.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.project-grid div {
+  background-color: #03045e;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.project-info-modal {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 50, 0.95);
+  padding: 2rem;
+  border-radius: 16px;
+  z-index: 2000;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.project-info-modal .media-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project-info-modal .media-row img,
+.project-info-modal .media-row video {
+  width: 16%;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.project-info-modal .media-row img:hover,
+.project-info-modal .media-row video:hover {
+  transform: scale(1.75);
+  z-index: 10;
+}
+
+#closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffb703;
+}
+
+.exp-box {
+  background-color: #023e8a;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.exp-box:hover {
+  transform: scale(1.02);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.exp-time {
+  font-style: italic;
+}
+
+.exp-box p {
+  margin-top: 0.5rem;
+  max-width: 60%;
+  line-height: 1.5;
+}
+
+.skills-boxes {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.skills-box {
+  background-color: #01497c;
+  padding: 1rem;
+  flex: 1;
+  border-radius: 10px;
+}
+
+.skills-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.memberships ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.memberships li::before {
+  content: "• ";
+  color: #90e0ef;
+}
