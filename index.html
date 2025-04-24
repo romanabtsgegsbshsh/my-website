@@ -1,115 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roman Avelar</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roman Avelar | Mechanical Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <div class="header-top">
-      <img src="portrait.jpg" alt="Portrait" class="portrait">
-      <h1>Roman Avelar</h1>
-      <p>Mechanical Engineering Student</p>
-      <p class="contact">(661) 444-3453 | ravelar@cpp.edu</p>
-      <div class="nav-buttons">
-        <a href="index.html" class="nav-btn">Resume</a>
-        <a href="personal.html" class="nav-btn">Personal</a>
-      </div>
+  <!-- Sticky top banner -->
+  <header class="top-banner">
+    <div class="banner-left">Roman Avelar</div>
+    <div class="banner-right">
+      <button onclick="location.href='index.html'">Resume</button>
+      <button onclick="location.href='personal.html'">Personal</button>
     </div>
   </header>
 
-  <main class="resume">
-    <section class="projects">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project" onclick="showDetails(0)">
-          <img src="thumb1.jpg" alt="Go-Kart Thumbnail">
-          <h3>Electric Go-Kart</h3>
-        </div>
-        <div class="project" onclick="showDetails(1)">
-          <img src="thumb2.jpg" alt="Mini Chopper Thumbnail">
-          <h3>Electric Mini Chopper</h3>
-        </div>
-        <div class="project" onclick="showDetails(2)">
-          <img src="thumb3.jpg" alt="TVC Thumbnail">
-          <h3>Thrust Vector Control System</h3>
-        </div>
-        <div class="project" onclick="showDetails(3)">
-          <img src="thumb4.jpg" alt="Tesla Coil Thumbnail">
-          <h3>Tesla Coil</h3>
-        </div>
-        <div class="project" onclick="showDetails(4)">
-          <img src="thumb5.jpg" alt="3D Printer Thumbnail">
-          <h3>Custom 3D Printer</h3>
-        </div>
-        <div class="project" onclick="showDetails(5)">
-          <img src="thumb6.jpg" alt="Drift Trike Thumbnail">
-          <h3>Electric Drift Trike</h3>
-        </div>
-        <div class="project" onclick="showDetails(6)">
-          <img src="thumb7.jpg" alt="Tesla Coil Gun Thumbnail">
-          <h3>Tesla Coil Gun</h3>
-        </div>
-        <div class="project" onclick="showDetails(7)">
-          <img src="thumb8.jpg" alt="CNC Thumbnail">
-          <h3>CNC Engraving Business</h3>
-        </div>
-      </div>
-      <p class="expand-text">click each to expand</p>
-      <div class="info-box" id="infoBox">
-        <h3 id="infoTitle"></h3>
-        <p id="infoText"></p>
-        <div class="info-images" id="infoImages"></div>
-      </div>
-    </section>
+  <!-- Hero section -->
+  <section class="hero">
+    <img src="portrait.jpg" alt="Portrait of Roman Avelar" class="portrait" />
+    <h1>Roman Avelar</h1>
+    <p class="subheading">Mechanical Engineering Student</p>
+    <p class="contact">(661) 444-3453 | ravelar@cpp.edu</p>
+  </section>
 
-    <section class="experience">
-      <h2>Experience</h2>
-      <div class="exp-box">
-        <div class="exp-header"><span class="exp-title">Intern - Howmet Aerospace</span><span class="exp-timeframe"><em>Summer 2025</em></span></div>
-      </div>
-      <div class="exp-box">
-        <div class="exp-header"><span class="exp-title">Intern - Engel & Company Engineers</span><span class="exp-timeframe"><em>Jun 2024 - Jan 2025</em></span></div>
-        <p class="exp-bullet">Assisted with development of proprietary apparatus for patent under the mentorship of professional engineers. Designed mechanical components with CAD, manufactured using various polymers with additive manufacturing.</p>
-      </div>
-      <div class="exp-box">
-        <div class="exp-header"><span class="exp-title">Mechanisms Deputy Lead - Rocket Powered Lander</span><span class="exp-timeframe"><em>Aug 2024 - Current</em></span></div>
-        <p class="exp-bullet">Applied principles of machine design, dynamics, thermodynamics, material properties, and system integration. Delegating and leading a team of student engineers to develop a throttle control apparatus and thrust vector control system for the project.</p>
-      </div>
-      <div class="exp-box">
-        <div class="exp-header"><span class="exp-title">Founder - Roman Milling & Engraving</span><span class="exp-timeframe"><em>Jul 2021 - Sep 2021</em></span></div>
-        <p class="exp-bullet">Established a custom CNC engraving business.</p>
-      </div>
-    </section>
+  <!-- Projects section -->
+  <section class="projects">
+    <h2>Projects <span class="hint">click each to expand</span></h2>
+    <div class="project-grid">
+      <!-- These will be dynamically filled by JavaScript -->
+    </div>
+    <div class="project-info-modal" id="projectInfo">
+      <span id="closeModal">×</span>
+      <div id="projectText"></div>
+      <div class="media-row" id="mediaRow"></div>
+    </div>
+  </section>
 
-    <section class="skills">
-      <h2>Skills</h2>
-      <div class="skill-boxes">
-        <div class="skill-box">
-          <h3>Technical</h3>
-          <p>Welding, Soldering, Machining, Electrical Work, Additive Manufacturing, CNC Machines, Metals and Plastics Manufacturing Processes, Analysis of Rigid Bodies, Machine Design</p>
-        </div>
-        <div class="skill-box">
-          <h3>Software</h3>
-          <p>SolidWorks, MATLAB, Simcenter Femap, Fusion360, Arduino IDE, 3D Printer Slicers, Python, C++, MS Office</p>
-        </div>
+  <!-- Experience section -->
+  <section class="experience">
+    <h2>Experience</h2>
+    <div class="exp-box" onmouseover="jiggle(this)">
+      <div class="exp-header">
+        <span class="exp-title">Intern - Howmet Aerospace</span>
+        <span class="exp-time">Summer 2025</span>
       </div>
-    </section>
+    </div>
+    <div class="exp-box" onmouseover="jiggle(this)">
+      <div class="exp-header">
+        <span class="exp-title">Intern - Engel & Company Engineers</span>
+        <span class="exp-time">Jun 2024 - Jan 2025</span>
+      </div>
+      <p>Assisted with development of proprietary apparatus for patent under the mentorship of professional engineers. Designed mechanical components with CAD, manufactured using various polymers with additive manufacturing.</p>
+    </div>
+    <div class="exp-box" onmouseover="jiggle(this)">
+      <div class="exp-header">
+        <span class="exp-title">Mechanisms Deputy Lead - Rocket Powered Lander</span>
+        <span class="exp-time">Aug 2024 - Current</span>
+      </div>
+      <p>Applied principles of machine design, dynamics, thermodynamics, material properties, and system integration. Delegating and leading a team of student engineers to develop a throttle control apparatus and thrust vector control system for the project.</p>
+    </div>
+    <div class="exp-box" onmouseover="jiggle(this)">
+      <div class="exp-header">
+        <span class="exp-title">Founder - Roman Milling & Engraving</span>
+        <span class="exp-time">Jul 2021 - Sep 2021</span>
+      </div>
+      <p>Established a custom CNC engraving business.</p>
+    </div>
+  </section>
 
-    <section class="memberships">
-      <h2>Memberships & Affiliations</h2>
-      <ul>
-        <li>ASME - Member - The American Society of Mechanical Engineers</li>
-        <li>SHPE - Member - Society of Hispanic Professional Engineers</li>
-        <li>AIAA - Member - American Institute of Aeronautics and Astronautics</li>
-        <li>FSAE E - Member - Formula SAE Electric</li>
-        <li>CPPMEC - Vice President - Cal Poly Pomona Motorcycle Engineering Club</li>
-      </ul>
-    </section>
-  </main>
+  <!-- Skills section -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skills-boxes">
+      <div class="skills-box">
+        <h3>Technical</h3>
+        <ul>
+          <li>Welding</li>
+          <li>Soldering</li>
+          <li>Machining</li>
+          <li>Electrical Work</li>
+          <li>Additive Manufacturing</li>
+          <li>CNC Machines</li>
+          <li>Metals and Plastics Manufacturing Processes</li>
+          <li>Analysis of Rigid Bodies</li>
+          <li>Machine Design</li>
+        </ul>
+      </div>
+      <div class="skills-box">
+        <h3>Software</h3>
+        <ul>
+          <li>SolidWorks</li>
+          <li>MATLAB</li>
+          <li>Simcenter Femap</li>
+          <li>Fusion360</li>
+          <li>Arduino IDE</li>
+          <li>3D Printer Slicers</li>
+          <li>Python</li>
+          <li>C++</li>
+          <li>MS Office</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- Memberships & Affiliations -->
+  <section class="memberships">
+    <h2>Memberships & Affiliations</h2>
+    <ul>
+      <li>ASME - Member - The American Society of Mechanical Engineers</li>
+      <li>SHPE - Member - Society of Hispanic Professional Engineers</li>
+      <li>AIAA - Member - American Institute of Aeronautics and Astronautics</li>
+      <li>FSAE E - Member - Formula SAE Electric</li>
+      <li>CPPMEC - Vice President - Cal Poly Pomona Motorcycle Engineering Club</li>
+    </ul>
+  </section>
 </body>
 </html>
